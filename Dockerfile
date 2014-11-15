@@ -17,10 +17,11 @@ RUN cd /tmp && \
 # Add scripts
 ADD scripts /scripts
 RUN chmod +x /scripts/*.sh
+ADD supervisor.conf /etc/supervisor/conf.d/logstash.conf
 
 # Command to run
 ENTRYPOINT ["/scripts/run.sh"]
-CMD [""]
+CMD ["/usr/bin/supervisord"]
 
 # Expose listen ports
 EXPOSE 1572

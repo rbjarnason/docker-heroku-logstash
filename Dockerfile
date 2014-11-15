@@ -20,7 +20,6 @@ RUN chmod +x /scripts/*.sh
 ADD supervisor.conf /etc/supervisor/conf.d/logstash.conf
 
 # Command to run
-ENTRYPOINT ["/scripts/run.sh"]
 CMD ["/usr/bin/supervisord"]
 
 # Expose listen ports

@@ -3,6 +3,10 @@ FROM dockerfile/java:oracle-java7
 
 MAINTAINER Robert Bjarnason <robert@citizens.is>
 
+VERSION "0.1"
+
+ENV ELASTICSEARCH_IP 127.0.0.1
+
 # Install Logstash 1.4.2
 RUN cd /tmp && \
     wget https://download.elasticsearch.org/logstash/logstash/logstash-1.4.2.tar.gz && \
@@ -19,4 +23,4 @@ ENTRYPOINT ["/scripts/run.sh"]
 CMD [""]
 
 # Expose listen ports
-EXPOSE 514
+EXPOSE 1572

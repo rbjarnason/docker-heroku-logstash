@@ -1,5 +1,7 @@
-FROM frodenas/java7
-MAINTAINER Ferran Rodenas <frodenas@gmail.com>
+# Pull base image.
+FROM dockerfile/java:oracle-java7
+
+MAINTAINER Robert Bjarnason <robert@citizens.is>
 
 # Install Logstash 1.4.2
 RUN cd /tmp && \
@@ -18,5 +20,3 @@ CMD [""]
 
 # Expose listen ports
 EXPOSE 514
-EXPOSE 9200
-EXPOSE 9300

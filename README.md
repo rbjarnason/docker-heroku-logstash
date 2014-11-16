@@ -17,5 +17,5 @@ $ docker build -t yrpri/heroku-logstash .
 To run the image and bind to host ports 514, 9200 and 9300:
 
 ```
-$ docker run -d --name logstash -p 514:514/udp -p 9200:9200 -p 9300:9300 yrpri/heroku-logstash
+$ docker run -d --name logstash -p 1572:1572 -e "ES_IP=xx.xx.xx.xx" yrpri/heroku-logstash
 ```

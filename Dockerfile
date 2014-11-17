@@ -3,7 +3,7 @@ FROM yrpri/java-base
 
 MAINTAINER Robert Bjarnason <robert@citizens.is>
 
-RUN echo 'version 0.5'
+RUN echo 'version 0.8'
 
 ENV ES_HOST 127.0.0.1
 
